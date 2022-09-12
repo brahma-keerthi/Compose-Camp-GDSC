@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,15 +14,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Extracting listView
-        ListView listView = (ListView) findViewById(R.id.listView);
-
-        // array of string to display in Activity
-        String arr[] = { "Welcome", "To", "Compose", "Camp", "Hope", "You", "All", "Had",
-                            "Great", "Day"};
-
-        // Creating array adapter this convert array to list view
-        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arr);
-        listView.setAdapter(ad);
+        //   4 TextViews in activity
+        TextView view1 = (TextView) findViewById(R.id.textView);
+        TextView view2 = (TextView) findViewById(R.id.textView2);
+        TextView view3 = (TextView) findViewById(R.id.textView3);
+        TextView view4 = (TextView) findViewById(R.id.textView4);
     }
 }
